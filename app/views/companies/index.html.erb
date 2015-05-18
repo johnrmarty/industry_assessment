@@ -1,11 +1,18 @@
 <h1> Companies Index </h1>
 
+<%= link_to "new company", new_company_path%> 
+
+<br>
+
 
 <table>
   <thead>
     <tr>
-      <th></th>
-      <th></th>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Price</th>
+      <th>Created at</th>
+      <th>Updated at</th>
     </tr>
   </thead>
 
@@ -14,9 +21,11 @@
 
 <% @companies.each do |x| %>
   <tr>
-    <td><%= x.name  %></td>    
+    <td><%= link_to x.name, company_path(x)  %></td>    
     <td><%= x.description %></td>
-	  <td> <%=  %></td>
+	  <td> <%= x.price %></td>
+	  <td> <%= x.created_at %></td>
+	  <td> <%= x.updated_at %></td>
   </tr>
       
     <% end %>

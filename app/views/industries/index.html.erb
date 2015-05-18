@@ -1,5 +1,7 @@
 <h1>Industries Index </h1>
 
+<%= link_to "Create a new Industry", new_industry_path %> 
+
 
 
 <table>
@@ -16,14 +18,26 @@
 
 <% @industries.each do |x| %>
   <tr>
-    <td><%= x.name %></td>    
+    <td><%= link_to x.name, industry_path(x)  %></td>    
     <td><%= x.created_at %></td>
 	  <td> <%= x.updated_at %></td>
+	  <td> <%= link_to "Edit Industry", edit_industry_path(x) %></td>
+	  <td><%= link_to "Delete Industry", industries_path(x), method: :delete, data: {confirm: 'Are you sure?'} %></td>
   </tr>
       
     <% end %>
 
 </tbody>
+
+
+	
+
+
+
+
+
+<!-- 
+Every industry should have a table below it listing each company that is apart of it. -->
 
 
 

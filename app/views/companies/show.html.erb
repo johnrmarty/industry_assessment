@@ -1,0 +1,60 @@
+
+
+<h1><%= @company.name %></h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>description</th>
+      <th>price</th>
+      <th>Created At</th>
+      <th>Updated At</th>
+    </tr>
+  </thead>
+
+
+<tbody>
+
+
+  <tr>   
+    <td><%= @company.description %></td>
+    <td><%= @company.price %></td>
+    <td><%= @company.created_at %></td>
+    <td><%= @company.updated_at %></td>
+    <td><%= link_to "Edit Company", edit_company_path %> </td>
+    <td><%= link_to "Delete Company", company_path, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+  </tr>
+      
+
+</tbody>
+</table>
+
+
+
+<h1> Industries </h1>
+
+<table>
+  
+
+
+<tbody>
+
+  <tr>
+    <td><%= @company.industry_id %></td>   
+  </tr>
+
+ 
+      
+
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
