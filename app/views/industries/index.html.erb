@@ -1,3 +1,38 @@
 <h1>Industries Index </h1>
 
 
+
+<table>
+  <thead>
+    <tr>
+      <th>Name </th>
+      <th>Created At</th>
+      <th>Last Updated </th>
+    </tr>
+  </thead>
+
+
+<tbody>
+
+<% @industries.each do |x| %>
+  <tr>
+    <td><%= x.name %></td>    
+    <td><%= x.created_at %></td>
+	  <td> <%= x.updated_at %></td>
+  </tr>
+      
+    <% end %>
+
+</tbody>
+
+
+
+
+
+
+
+
+
+
+
+
